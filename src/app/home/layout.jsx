@@ -1,19 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { Sidebar } from "../../components/layout/sidebar";
-
-
+import Sidebar from "@/components/layout/Sidebar";
+import Header from "@/components/layout/Header";
 
 export default function MainLayout({ children }) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  // Side Bar
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  // Qual página atual?
+  const [actualPage, setActualPage] = useState("/home");
 
   return (
-    <div className="min-h-screen bg-amber-50">
-      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-
-      <main className="lg:ml-64 pt-16">
-        <div className="p-6">{children}</div>
+    <div className="min-h-screen bg-[var(--light-bg2)]">
+      <Header isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen}/>
+      <Sidebar isSidebarOpen={isSidebarOpen} actualPage={actualPage} setActualPage={setActualPage}/>
+      <main className="">
+        <div className="">{children}</div>
       </main>
     </div>
   );

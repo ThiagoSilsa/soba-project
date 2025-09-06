@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
-
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -38,11 +35,36 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
-  --roxo-fundo1: #9E72C3;
-  --roxo-fundo2: #924DBF;
-  --roxo-fundo3: #7338A0;
-  --roxo-fundo4: #4A2574;
-  --roxo-fundo5: #0F0529;
+  --roxo-fundo1: #e0b3ff;
+  --roxo-fundo2: #b366ff;
+  --roxo-fundo3: #9333ea;
+  --roxo-fundo4: #6c2bd9;
+  --roxo-fundo5: #4c1d95;
+
+  --light-bg1: #ffffff; /* fundo principal */
+  --light-bg2: #f2f2f7; /* fundo secundário */
+  --light-border: #e5e5ea; /* bordas */
+  --light-text1: #1c1c1e; /* texto principal */
+  --light-text2: #3a3a3c; /* texto secundário */
+
+  --dark-bg1: #000000; /* fundo principal */
+  --dark-bg2: #1c1c1e; /* fundo secundário */
+  --dark-bg3: #2c2c2e; /* cards */
+  --dark-text1: #f2f2f7; /* texto principal */
+  --dark-text2: #a1a1aa; /* texto secundário */
+
+  --button-primary: #007aff; /* Azul padrão Apple */
+  --button-primary-hover: #005bb5; /* Azul mais escuro no hover */
+  --button-primary-active: #004085; /* Pressionado */
+  --button-primary-disabled: #b0b0b0; /* Desabilitado */
+
+  --button-danger: #ff3b30;
+  --button-danger-hover: #e02e24;
+  --button-danger-active: #b22218;
+
+  --button-success: #34c759;
+  --button-success-hover: #28a745;
+  --button-success-active: #1e7e34;
 }
 
 .dark {
@@ -78,5 +100,3 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
-
-
