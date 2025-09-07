@@ -1,12 +1,14 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { Calculator, Users } from "lucide-react";
-import { BsCurrencyDollar } from "react-icons/bs";
-import { MdOutlineTableBar } from "react-icons/md";
+
+import MenuModalPedido from "./components/MenuModalPedido";
 import Tables from "./components/Tables";
 
+import { useState, useRef } from "react";
+
 export default function Mesas() {
+  const [menuModal, setMenuModal] = useState(false);
   // Simulação de Arquivos JSON
   const tables = [
     {
@@ -101,7 +103,7 @@ export default function Mesas() {
             </div>
             <div>
               <p className="text-text-muted text-sm">Mesas Ativas</p>
-              <p className="text-2xl font-bold ">8</p>
+              <p className="text-2xl font-bold ">{tables.length}</p>
             </div>
           </div>
         </div>
@@ -120,9 +122,16 @@ export default function Mesas() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {tables.map((table) => {
-          return <Tables table={table} key={table.id}/>;
+          return (
+            <Tables table={table} key={table.id} setMenuModal={setMenuModal} />
+          );
         })}
       </div>
+
+      {/* Menu modal de criação do pedido */}
+      {menuModal && (
+        <MenuModalPedido menuModal={menuModal} setMenuModal={setMenuModal} />
+      )}
     </>
   );
 }
