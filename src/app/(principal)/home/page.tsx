@@ -1,6 +1,5 @@
 "use client";
 
-
 export default function Dashboard() {
   // Simulação de Arquivos JSON
   const orders = [
@@ -42,6 +41,9 @@ export default function Dashboard() {
     },
   ];
 
-
-  return <></>;
+  return (
+    <>
+      <h2>kkkkkkkkkkkdfgfdgfdgdfgfddfgdfgdfgfdgfdgdfgfdgdfgfdgdfgdfgkkk</h2>
+    </>
+  );
 }
