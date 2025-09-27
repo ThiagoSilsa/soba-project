@@ -1,16 +1,14 @@
-import { Button } from "@/components/ui/button";
-import { DollarSign } from "lucide-react";
-import { useEffect, useRef } from "react";
-import { AiOutlinePlus } from "react-icons/ai";
 import { LiaTimesSolid } from "react-icons/lia";
 
 export default function MenuModalPedido({ menuModal, setMenuModal }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div
+      <button
+        type="button"
         onClick={() => setMenuModal(false)}
         className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"
-      />
+        aria-label="Fechar modal"
+      ></button>
       <div
         className={`relative bg-[var(--light-bg2)] rounded-lg shadow-xl w-full mx-4 max-w-max`}
       >
@@ -18,6 +16,7 @@ export default function MenuModalPedido({ menuModal, setMenuModal }) {
         <div className="flex items-center justify-between p-6 border-b border-[var(--light-border)]">
           <h2 className="text-lg font-semibold ">Adicionar pedido</h2>
           <button
+            type="button"
             onClick={() => {
               setMenuModal(false);
             }}
@@ -50,7 +49,10 @@ export default function MenuModalPedido({ menuModal, setMenuModal }) {
 
               {/* Pedidos */}
               <div className="flex-col w-120 justify-center">
-                <button className="shadow-md bg-[var(--light-bg1)] rounded-md p-4 w-full flex items-center justify-between mb-2 border border-[var(--purple-bg2)]">
+                <button
+                  type="button"
+                  className="shadow-md bg-[var(--light-bg1)] rounded-md p-4 w-full flex items-center justify-between mb-2 border border-[var(--purple-bg2)]"
+                >
                   <p className="text-md font-medium text-left">
                     Filé de Peixe ao molho de camarote
                   </p>
@@ -58,7 +60,10 @@ export default function MenuModalPedido({ menuModal, setMenuModal }) {
                     R$ 125,00
                   </p>
                 </button>
-                <button className="shadow-md bg-[var(--light-bg1)] rounded-md p-4 w-full flex items-center justify-between mb-2">
+                <button
+                  type="button"
+                  className="shadow-md bg-[var(--light-bg1)] rounded-md p-4 w-full flex items-center justify-between mb-2"
+                >
                   <p className="text-md font-medium text-left">
                     Peixe frito a moda da casa
                   </p>
@@ -66,7 +71,10 @@ export default function MenuModalPedido({ menuModal, setMenuModal }) {
                     R$ 130,00
                   </p>
                 </button>
-                <button className="shadow-md bg-[var(--light-bg1)] rounded-md p-4 w-full flex items-center justify-between mb-2">
+                <button
+                  type="button"
+                  className="shadow-md bg-[var(--light-bg1)] rounded-md p-4 w-full flex items-center justify-between mb-2"
+                >
                   <p className="text-md font-medium text-left">
                     fala comi-i-igo
                   </p>
@@ -94,6 +102,7 @@ export default function MenuModalPedido({ menuModal, setMenuModal }) {
 
             <div className="flex gap-3 pt-4 justify-between">
               <button
+                type="button"
                 className="bg-[var(--button-danger)]/80 text-[var(--dark-text1)] font-medium w-full rounded-md p-2 cursor-pointer  hover:bg-[var(--button-danger-hover)]"
                 onClick={() => {
                   setMenuModal(false);
@@ -101,7 +110,10 @@ export default function MenuModalPedido({ menuModal, setMenuModal }) {
               >
                 Cancelar
               </button>
-              <button className="bg-[var(--button-success)] text-[var(--dark-text1)] font-medium w-full rounded-md cursor-pointer  hover:bg-[var(--button-success-hover)]">
+              <button
+                type="button"
+                className="bg-[var(--button-success)] text-[var(--dark-text1)] font-medium w-full rounded-md cursor-pointer  hover:bg-[var(--button-success-hover)]"
+              >
                 Confirmar pedido
               </button>
             </div>

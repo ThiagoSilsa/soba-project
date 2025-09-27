@@ -4,6 +4,7 @@
 }
 
 .background {
+  background-color: black;
   position: absolute;
   top: 0;
   left: 0;
@@ -41,5 +42,5 @@
 }
 
 .buttom:hover{
-  background-color: var(--purple-bg2)
+  background-color: rgb(255, 0, 85)
 }
