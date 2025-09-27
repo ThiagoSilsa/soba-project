@@ -5,25 +5,14 @@ import { AiOutlinePlus } from "react-icons/ai";
 import { LiaTimesSolid } from "react-icons/lia";
 
 export default function MenuModalPedido({ menuModal, setMenuModal }) {
-  const menuRef = useRef(null);
-  useEffect(() => {
-    if (!menuModal) return;
-
-    function handleClickOutside(e) {
-      if (menuRef.current && !menuRef.current.contains(e.target)) {
-        setMenuModal(false);
-      }
-    }
-    document.addEventListener("click", handleClickOutside);
-    return () => document.removeEventListener("click", handleClickOutside);
-  }, [menuModal]);
-
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]" />
+      <div
+        onClick={() => setMenuModal(false)}
+        className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"
+      />
       <div
         className={`relative bg-[var(--light-bg2)] rounded-lg shadow-xl w-full mx-4 max-w-max`}
-        ref={menuRef}
       >
         {/* Cabeçalho! */}
         <div className="flex items-center justify-between p-6 border-b border-[var(--light-border)]">

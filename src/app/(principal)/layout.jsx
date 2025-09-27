@@ -13,7 +13,6 @@ export default function MainLayout({ children }) {
   return (
     <div className="min-h-screen bg-[var(--light-bg2)] relative">
       <Header 
-      
       isSidebarOpen={isSidebarOpen} setSidebarOpen={setSidebarOpen} />
       <Sidebar
         isSidebarOpen={isSidebarOpen}

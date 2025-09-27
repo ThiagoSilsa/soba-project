@@ -39,3 +39,7 @@
 .buttom{
   background-color: aliceblue;
 }
+
+.buttom:hover{
+  background-color: var(--purple-bg2)
+}

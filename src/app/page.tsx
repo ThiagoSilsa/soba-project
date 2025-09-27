@@ -14,8 +14,11 @@ export default function Home() {
       <main className={`${styles.main} animate-fadeInUp`}>
         <h3>Bem vindo ao</h3>
         <h1>SoBa</h1>
-        <Button asChild variant={"secondary"} size="lg" className={styles.buttom}>
-          <Link href="/home">Entre</Link>
+        <Button asChild 
+        variant={"default"}
+        size="lg" className={styles.buttom}>
+          <Link 
+          href="/home">Entre</Link>
         </Button>
       </main>
     </div>
