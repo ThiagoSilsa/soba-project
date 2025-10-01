@@ -2,7 +2,7 @@ import { LiaTimesSolid } from "react-icons/lia";
 
 export default function MenuModalPedido({ menuModal, setMenuModal }) {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center">
+    <div className="fixed inset-0 z-3 flex items-center justify-center">
       <button
         type="button"
         onClick={() => setMenuModal(false)}

@@ -10,8 +10,9 @@ const Header = ({ isSidebarOpen, setSidebarOpen }) => {
   }
 
   return (
-    <div className="px-5 bg-[var(--purple-bg5)] h-14 flex items-center gap-2 text-white font-bold text-2xl border-b border-border border-black">
+    <div className="fixed w-full z-1 px-5 bg-[var(--purple-bg5)] h-14 flex items-center gap-2 text-white font-bold text-2xl border-b border-border border-black">
       <button
+      type="button"
         onClick={handleSideBar}
         className={cn(
           "cursor-pointer hover:scale-110 transition-transform font-bold",

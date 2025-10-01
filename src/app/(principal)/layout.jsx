@@ -21,13 +21,13 @@ export default function MainLayout({ children }) {
         setActualPage={setActualPage}
       />
       <div className="pl-16 relative">
-      <main className="p-6 text-[var(--light-text1)]">{children}</main>
-
+      <main className="p-6 pt-18 text-[var(--light-text1)]">{children}</main>
+  
       </div>
       {isSidebarOpen && (
         <div
           onClick={() => setSidebarOpen(false)}
-          className="fixed inset-0 top-14 bg-black/50 backdrop-blur-[2px] z-5"
+          className="fixed inset-0 top-14 bg-black/50 backdrop-blur-[2px] z-2"
         />
       )}
     </div>

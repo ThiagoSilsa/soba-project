@@ -5,15 +5,14 @@ import { Calculator, Users } from "lucide-react";
 import MenuModalPedido from "./components/MenuModalPedido";
 import TableCard from "./components/TableCard";
 
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 
 import TableController from "../../../Controllers/TableController.js";
 import { toast } from "react-toastify";
 
-export default function Mesas() {
-  const queryClient = useQueryClient();
+export default function Tables() {
   const [menuModal, setMenuModal] = useState(false);
   const [isFiltered, setIsFiltered] = useState("");
 
@@ -91,7 +90,11 @@ export default function Mesas() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {tablesFiltered?.map((table) => {
           return (
-            <TableCard table={table} key={table.id} setMenuModal={setMenuModal} />
+            <TableCard
+              table={table}
+              key={table.id}
+              setMenuModal={setMenuModal}
+            />
           );
         })}
       </div>
