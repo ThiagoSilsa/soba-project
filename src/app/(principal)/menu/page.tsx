@@ -14,12 +14,14 @@ export default function Dashboard() {
     <>
       <h1>{contador}</h1>
       <button
+        type="button"
         className="cursor-pointer bg-gray-600 rounded-2xl p-3 text-white hover:bg-purple-950"
         onClick={() => setContador(contador + 1)}
       >
         Adicionar mais um
       </button>
       <button
+        type="button"
         className="cursor-pointer bg-gray-600 rounded-2xl p-3 text-white hover:bg-purple-950"
         onClick={() => setContador(contador)}
       >

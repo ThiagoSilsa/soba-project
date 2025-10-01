@@ -2,11 +2,10 @@
 
 export default function Config() {
   // Simulação de Arquivos JSON
-  
 
   return (
     <>
-      <h2>Configurações!</h2>
+      <h2>Help!</h2>
     </>
   );
 }
